@@ -1,0 +1,38 @@
+[package]
+name = "obs-remote-control"
+version = "0.1.0"
+edition = "2021"
+author = "Kuriko Moe"
+description = "Use hotkey to control remote obs switch to specific scene as well as back."
+license = "MIT"
+homepage = "https://github.com/kurikomoe/obs_remote_scene_switch"
+repository = "https://github.com/kurikomoe/obs_remote_scene_switch"
+documentation = "https://github.com/kurikomoe/obs_remote_scene_switch"
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.71"
+async-trait = "0.1.68"
+clap = { version = "4.3.0", features = ["derive"] }
+clap-verbosity-flag = "2.0.1"
+derivative = "2.2.0"
+env_logger = "0.10.0"
+futures = "0.3.28"
+global-hotkey = "0.2.1"
+keycode = "0.4.0"
+log = "0.4.17"
+obws = "0.11.0"
+once_cell = "1.17.1"
+secrecy = { version = "0.8.0", features = ["serde"] }
+serde = { version = "1.0.163", features = ["derive"] }
+tokio = { version = "1.28.1", features = ["full"] }
+toml = "0.7.4"
+winit = "0.28.6"
+
+[profile.release]
+lto = true
+debug = 0
+opt-level = 3
+strip = "debuginfo"

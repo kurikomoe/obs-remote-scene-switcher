@@ -1,0 +1,10 @@
+[server]
+host = "127.0.0.1"
+port = 4455
+password = "password"
+
+[plugin.switch_scene]
+# [ctrl] + [shift] + b
+hotkey = "Ctrl+b"
+safe_scene_name = "和谐"
+
