@@ -2,7 +2,7 @@
 name = "obs-remote-control"
 version = "0.1.0"
 edition = "2021"
-author = "Kuriko Moe"
+authors = ["Kuriko Moe"]
 description = "Use hotkey to control remote obs switch to specific scene as well as back."
 license = "MIT"
 homepage = "https://github.com/kurikomoe/obs_remote_scene_switch"

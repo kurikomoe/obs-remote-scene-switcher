@@ -101,7 +101,7 @@ impl Client {
         event_loop.run(move |_event, _, control_flow| {
             *control_flow = ControlFlow::Poll;
 
-            if let Ok(event) = global_hotkey_channel.try_recv() {
+            if let Ok(event) = global_hotkey_channel.recv() {
                 let id = event.id;
                 if let Some(plugin) = hotkey_plugins.get_mut(&id) {
                     info!("invoke hotkey plugin: {}", plugin.name());
